@@ -19,11 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LayoutComposeAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background) {
-
-                }
+                BodyContentStaggeredGrid()
             }
         }
     }
@@ -37,11 +33,12 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TextWithNormalPaddingPreview() {
     LayoutComposeAppTheme {
-        MyOwnColumn(modifier = Modifier.padding(8.dp)) {
-            Text(text = "MyOwnColumn")
-            Text(text = "placed items")
-            Text(text = "vertically as we wanted")
-            Text(text = "We have done it")
-        }
+//        MyOwnColumn(modifier = Modifier.padding(8.dp)) {
+//            Text(text = "MyOwnColumn")
+//            Text(text = "placed items")
+//            Text(text = "vertically as we wanted")
+//            Text(text = "We have done it")
+//        }
+        BodyContentStaggeredGrid()
     }
 }
